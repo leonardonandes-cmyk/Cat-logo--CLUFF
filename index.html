@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLUFF · Catálogo · Linha EVA</title>
+<meta name="description" content="Catálogo CLUFF — clogs e a linha EVA. Conforto e liberdade em cada passo. Nova Serrana.">
+<link rel="canonical" href="https://cluff-cat-logo.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CLUFF">
+<meta property="og:title" content="CLUFF · Catálogo · Linha EVA">
+<meta property="og:description" content="Clogs e a linha EVA. Conforto e liberdade em cada passo.">
+<meta property="og:url" content="https://cluff-cat-logo.vercel.app/">
+<meta property="og:locale" content="pt_BR">
+<!-- FOTO QUE APARECE NA PRÉVIA AO COMPARTILHAR O LINK (WhatsApp, Instagram, etc).
+     Regras pra funcionar no WhatsApp:
+       - precisa ser .jpg ou .png  (o WhatsApp costuma IGNORAR .jfif)
+       - leve: menos de 300 KB
+       - de preferência HORIZONTAL, ~1200x630
+     Suba no repo cluff-cat-logo um arquivo chamado  og.jpg  (do lado das outras fotos). -->
+<meta property="og:image" content="https://cluff-cat-logo.vercel.app/og.jpg">
+<meta property="og:image:secure_url" content="https://cluff-cat-logo.vercel.app/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CLUFF · Linha EVA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CLUFF · Catálogo · Linha EVA">
+<meta name="twitter:description" content="Clogs e a linha EVA. Conforto e liberdade em cada passo.">
+<meta name="twitter:image" content="https://cluff-cat-logo.vercel.app/og.jpg"><meta name="theme-color" content="#f8efd0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== Paleta CLUFF ===== */
+  :root{
+    --bg:#fdfaf2;            /* creme claro de fundo */
+    --ink:#152532;           /* marinho da logo — texto */
+    --soft:#5c6a72;          /* marinho suave */
+    --line:#e6ddc7;          /* linha creme */
+    --gold:#c2a15c;          /* dourado das correntes — accent */
+    --studio:#f1ead9;        /* fundo das fotos (creme) */
+    --card:#fff;
+    --cream:#f8efd0;         /* creme da marca */
+    --cream2:#ecdca4;        /* creme forte */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.5}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(253,250,242,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:'Baloo 2',cursive;font-weight:700;font-size:28px;letter-spacing:.02em;color:var(--ink);white-space:nowrap;text-decoration:none;line-height:1}
+  nav{display:flex;align-items:center;gap:24px;overflow-x:auto;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none;position:relative;padding:4px 0;white-space:nowrap;transition:color .3s}
+  nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s}
+  nav a:hover{color:var(--ink)} nav a:hover::after{width:100%}
+  nav a.menu-sale{color:#fff;background:#c1272d;padding:5px 12px;border-radius:20px;font-weight:600;letter-spacing:.14em;box-shadow:0 2px 8px rgba(193,39,45,.32)}
+  nav a.menu-sale:hover{background:#a01f24;color:#fff}
+  nav a.menu-sale::after{display:none}
+
+  .hero{position:relative;height:80vh;max-height:740px;min-height:460px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .hero-pic{position:absolute;inset:0}
+  .hero-pic img{width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:kb 22s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,37,50,.14),rgba(21,37,50,.42))}
+  .hero-inner{position:relative;z-index:2;text-align:center;color:#fff;padding:0 24px}
+  .hero-eyebrow{font-size:11px;letter-spacing:.36em;text-transform:uppercase;margin-bottom:18px;opacity:0;animation:rise .9s .1s forwards}
+  .hero h1{font-family:'Baloo 2',cursive;font-weight:700;font-size:clamp(52px,11vw,104px);letter-spacing:.02em;line-height:1;opacity:0;animation:rise .9s .25s forwards}
+  .hero-sub{margin-top:14px;font-size:13px;letter-spacing:.32em;text-transform:uppercase;opacity:0;animation:rise .9s .4s forwards}
+  .hero-cta{display:inline-block;margin-top:30px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.6);padding:13px 30px;border-radius:24px;transition:background .35s,color .35s;opacity:0;animation:rise .9s .55s forwards}
+  .hero-cta:hover{background:#fff;color:var(--ink)}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  .manifesto{padding:74px 24px 58px;text-align:center;border-bottom:1px solid var(--line)}
+  .manifesto-in{max-width:740px;margin:0 auto}
+  .manifesto .risco{display:block;width:54px;height:1px;background:var(--gold);margin:0 auto 28px}
+  .manifesto p{font-family:'Baloo 2',cursive;font-weight:600;font-size:clamp(26px,4.4vw,42px);line-height:1.24;color:var(--ink)}
+  @media(max-width:640px){.manifesto{padding:54px 24px 44px}}
+
+  .campanhas{max-width:1180px;margin:0 auto;padding:56px 24px 54px;position:relative}
+  .camp-viewport{position:relative}
+  .camp-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .camp-track::-webkit-scrollbar{display:none}
+  .card.camp-card{flex:0 0 38%;scroll-snap-align:start;opacity:1;transform:none}
+  .camp-card .frame{aspect-ratio:4/5;cursor:default;border-radius:14px}
+  .camp-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(253,250,242,.94);border:1px solid var(--line);color:var(--ink);font-family:'Jost',sans-serif;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:0 4px 16px rgba(21,37,50,.12);transition:opacity .3s,background .3s;opacity:0}
+  .camp-viewport:hover .camp-arrow{opacity:1}
+  .camp-arrow:hover{background:#fff}
+  .camp-arrow.prev{left:-10px}
+  .camp-arrow.next{right:-10px}
+  .camp-arrow:disabled{opacity:0!important;pointer-events:none}
+  @media(max-width:1040px){.card.camp-card{flex-basis:46%}}
+  @media(max-width:720px){
+    .campanhas{padding:44px 24px 42px}
+    .camp-track{gap:12px}
+    .card.camp-card{flex-basis:84%}
+    .camp-arrow{display:none}
+  }
+
+  .collection{max-width:1180px;margin:0 auto;padding:56px 24px 8px}
+  .col-head{margin-bottom:30px;max-width:560px}
+  .col-eyebrow{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .col-title{font-family:'Baloo 2',cursive;font-weight:600;font-size:34px;letter-spacing:.01em}
+  .col-desc{margin-top:12px;color:var(--ink);font-size:14px;line-height:1.6;font-weight:500}
+  .rule{height:1px;background:var(--line);position:relative;margin-top:20px;overflow:hidden}
+  .rule::after{content:"";position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);transition:width 1.1s cubic-bezier(.16,.8,.3,1)}
+  .rule.in::after{width:120px}
+  .pub-head{padding-bottom:0}
+  .pub-head .col-title{font-family:'Baloo 2',cursive;font-weight:700;font-size:clamp(40px,7vw,52px);letter-spacing:.02em}
+  .pub-head + .collection{padding-top:14px}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding-bottom:44px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:26px}}
+  @media(min-width:1040px){.grid{grid-template-columns:repeat(4,1fr);gap:28px}}
+
+  .card{background:var(--card);opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;display:block}
+  .card.in{opacity:1;transform:none}
+  .frame{position:relative;overflow:hidden;background:#fff;aspect-ratio:4/5;display:block;text-decoration:none;border-radius:14px}
+  .frame img{width:100%;height:100%;object-fit:contain;display:block;transition:transform 1.4s cubic-bezier(.16,.8,.3,1),opacity .25s}
+  .camp-card .frame img{object-fit:cover}
+  .card:hover .frame img{transform:scale(1.06)}
+  .tag{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);background:rgba(248,239,208,.94);padding:5px 10px;border-radius:20px;z-index:3}
+  .dl{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;background:rgba(253,250,242,.92);color:var(--ink);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.9;transition:opacity .3s,background .3s,transform .2s;z-index:4;user-select:none}
+  .dl:hover{opacity:1;background:#fff;transform:translateY(-1px)}
+  .buy{position:absolute;left:0;right:0;bottom:0;background:rgba(21,37,50,.92);color:#fff;text-align:center;padding:12px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;transform:translateY(100%);transition:transform .4s;z-index:3}
+  .card:hover .buy{transform:translateY(0)}
+  .meta{padding:16px 4px 8px;text-align:center}
+  .name{font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+  .price{margin-top:7px;font-size:15px;font-weight:400;color:#26333d}
+  .tamanhos{margin-top:5px;font-size:10.5px;letter-spacing:.1em;color:var(--soft)}
+  .swatches{display:flex;gap:7px;justify-content:center;margin-top:11px;flex-wrap:wrap}
+  .dot{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.14);cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .dot:hover{transform:scale(1.15)}
+  .dot.on{box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--gold)}
+  .cor-nome{margin-top:8px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);min-height:14px}
+
+  .vazio{padding:26px 4px 48px;color:var(--soft);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  .ofertas{background:#f6e2d8;max-width:none;padding-left:0;padding-right:0}
+  .ofertas-in{max-width:1180px;margin:0 auto;padding:18px 24px 50px}
+  .ofertas .col-eyebrow{color:#c1272d}
+  .ofertas .col-title{color:#c1272d;font-size:clamp(46px,8vw,60px);line-height:1;letter-spacing:.02em}
+  .ofertas .col-desc{color:#c1272d;font-weight:500}
+  .ofertas .rule::after{background:#c1272d}
+  .tag-oferta{color:#fff!important;background:#c1272d!important}
+  .price.sale{color:#c1272d;font-weight:700}
+  .price-de{color:#a99f8e;text-decoration:line-through;font-weight:400;font-size:.82em;margin-right:8px}
+
+  /* ---- Faixa grupo exclusivo de compras (só aparece se GRUPO_WHATSAPP tiver link) ---- */
+  .grupo{display:none;justify-content:center;padding:26px 24px 4px}
+  .grupo.on{display:flex}
+  .grupo a{display:inline-flex;align-items:center;gap:11px;color:#fff;text-decoration:none;
+           font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+           padding:16px 30px;border-radius:24px;
+           background-image:linear-gradient(90deg,#1fae4e,#25d366,#1fae4e);
+           background-size:300% 100%;animation:grupoSlide 6s linear infinite;
+           box-shadow:0 4px 16px rgba(37,211,102,.3);transition:transform .3s}
+  .grupo a:hover{transform:translateY(-2px)}
+  .grupo svg{width:19px;height:19px;flex-shrink:0}
+  @keyframes grupoSlide{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+  @media(prefers-reduced-motion:reduce){.grupo a{animation:none;background-position:0% 50%}}
+  @media(max-width:640px){
+    .grupo{padding:20px 18px 2px}
+    .grupo a{font-size:10.5px;letter-spacing:.1em;padding:14px 20px;text-align:center}
+  }
+
+  /* ---- Faixa SALE ---- */
+  .zsale{display:block;position:relative;overflow:hidden;background:#c1272d;height:clamp(120px,17vw,168px);margin:0}
+  .zsale-word{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+              font-family:'Baloo 2',cursive;font-weight:700;color:#fff;
+              font-size:clamp(74px,13vw,140px);line-height:1;letter-spacing:.05em;white-space:nowrap;user-select:none;pointer-events:none}
+  @media(max-width:640px){
+    .zsale{height:clamp(104px,26vw,132px)}
+    .zsale-word{font-size:clamp(64px,17vw,112px)}
+  }
+
+  /* ---- Botões 3D ---- */
+  .btn{display:block;width:100%;max-width:430px;margin:0 auto;padding:17px 22px;text-align:center;
+       font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+       text-decoration:none;border-radius:28px;cursor:pointer;
+       transition:transform .12s ease,box-shadow .12s ease,background .35s ease,color .35s ease}
+  .btn:active{transform:translateY(5px);box-shadow:0 0 0 rgba(0,0,0,0)!important}
+  .btn-shopee{background:var(--cream2);color:var(--ink);box-shadow:0 5px 0 #cbb47e}
+  .btn-shopee:hover{background:#ee4d2d;color:#fff;box-shadow:0 5px 0 #b8381d}
+  .btn-ig{color:#fff;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);box-shadow:0 5px 0 #8d1263}
+  .btn-ig:hover{filter:brightness(1.08)}
+  .btn-dbaesse{background:var(--ink);color:var(--cream);box-shadow:0 5px 0 #0a141c}
+  .btn-dbaesse:hover{background:#1d3346}
+
+  .reseller{max-width:1180px;margin:26px auto 0;padding:0 24px}
+  .reseller-inner{background:var(--ink);color:#fff;text-align:center;padding:62px 24px 58px;border-radius:22px}
+  .reseller-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream2);margin-bottom:16px}
+  .reseller h3{font-family:'Baloo 2',cursive;font-weight:600;font-size:clamp(30px,4.6vw,44px);line-height:1.15}
+  .reseller .frase{font-family:'Baloo 2',cursive;font-weight:600;
+       font-size:clamp(24px,3.8vw,36px);line-height:1.25;color:#fff;margin-bottom:14px}
+  .reseller h3{opacity:.94}
+  .reseller p{max-width:520px;margin:18px auto 30px;font-size:14.5px;line-height:1.65;color:#e9e3d6}
+  .reseller .nota{margin-top:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream2)}
+
+  footer{border-top:1px solid var(--line);margin-top:44px;padding:48px 24px 56px;text-align:center}
+  .foot-mark{font-family:'Baloo 2',cursive;font-weight:700;font-size:26px;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+  .foot-line{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft)}
+  .conecta{max-width:1180px;margin:0 auto;padding:56px 24px 8px;text-align:center}
+  .conecta .rot{font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .conecta .gap{height:34px}
+  .conecta .sub{max-width:430px;margin:10px auto 0;font-size:12.5px;color:var(--soft);line-height:1.6}
+
+  .status{max-width:1180px;margin:0 auto;padding:48px 24px;text-align:center;color:var(--soft);font-size:13px;letter-spacing:.1em}
+  @media(max-width:640px){
+    .bar{flex-direction:column;gap:14px}
+    nav{gap:18px;width:100%}
+    nav a{font-size:11px;letter-spacing:.1em}
+    .collection{padding-top:44px}
+    .hero{height:86vh;min-height:520px;max-height:none}
+    .hero-pic img{object-position:center 34%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    .card{opacity:1;transform:none}.rule::after{width:120px}
+    .hero-eyebrow,.hero h1,.hero-sub,.hero-cta{opacity:1}
+  }
+  /* ===== GRID PÓDIO — piloto só na linha INFANTIL (seções id="infantil-...") ===== */
+  .collection[id^="infantil-"] .grid{gap:18px}
+  .collection[id^="infantil-"] .card{background:#F4C0D1;border-radius:22px;padding:14px 14px 16px;box-shadow:0 8px 18px rgba(60,40,25,.16)}
+  .collection[id^="infantil-"] .card:nth-child(5n+2){background:#CBC6F2}
+  .collection[id^="infantil-"] .card:nth-child(5n+3){background:#9FE1CB}
+  .collection[id^="infantil-"] .card:nth-child(5n+4){background:#FAC775}
+  .collection[id^="infantil-"] .card:nth-child(5n+5){background:#AFCBEF}
+  .collection[id^="infantil-"] .frame{aspect-ratio:1/1;background:#fff;border-radius:16px;box-shadow:0 11px 16px rgba(0,0,0,.20);transform:rotate(-4deg);transition:transform .35s cubic-bezier(.16,.8,.3,1),box-shadow .35s}
+  .collection[id^="infantil-"] .card:nth-child(2n) .frame{transform:rotate(4deg)}
+  .collection[id^="infantil-"] .frame img{padding:9px}
+  .collection[id^="infantil-"] .card:hover .frame{transform:rotate(0) translateY(-5px) scale(1.03);box-shadow:0 18px 24px rgba(0,0,0,.24)}
+  .collection[id^="infantil-"] .card:active .frame{transform:rotate(0) translateY(3px) scale(.97);box-shadow:0 5px 9px rgba(0,0,0,.22)}
+  .collection[id^="infantil-"] .meta{padding:12px 4px 2px}
+  .collection[id^="infantil-"] .name{font-family:'Baloo 2',cursive;font-weight:700;font-size:24px;letter-spacing:.01em;text-transform:none;color:#2c2c2a;line-height:1}
+  .collection[id^="infantil-"] .price{font-size:15px;font-weight:600;color:#2c2c2a}
+  .collection[id^="infantil-"] .tamanhos{color:rgba(0,0,0,.5)}
+  .collection[id^="infantil-"] .cor-nome{color:rgba(0,0,0,.6)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="wordmark" href="#top">Cluff</a>
+    <nav id="menu"></nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <picture class="hero-pic"><img id="heroImg" alt="Campanha CLUFF" fetchpriority="high" decoding="async"></picture>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Linha EVA</div>
+    <h1>Cluff</h1>
+    <div class="hero-sub">Freedom &amp; Comfort</div>
+    <a class="hero-cta" href="#conteudo">Ver Coleção</a>
+  </div>
+</section>
+
+<div class="grupo" id="faixaGrupo">
+  <a id="linkGrupo" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 9.98c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+    PARTICIPE DO GRUPO EXCLUSIVO DE COMPRAS
+  </a>
+</div>
+
+<div id="conteudo">
+  <div class="status" id="status">Carregando o catálogo…</div>
+</div>
+
+<section class="reseller">
+  <div class="reseller-inner">
+    <div class="reseller-eyebrow">Trabalhe com a CLUFF</div>
+    <div class="frase">Conforto que a cliente pede de volta.</div>
+    <h3>Seja uma Revendedora</h3>
+    <p>Comece com pouco e venda o ano todo com uma linha leve, confortável e fácil de sair. A gente te dá as fotos, os preços e o suporte — você cuida das suas vendas.</p>
+    <a class="btn btn-dbaesse" id="linkRev" href="#">Quero ser revendedora</a>
+    <div class="nota">Leveza pra você vender. Liberdade pra você crescer.</div>
+  </div>
+</section>
+
+<section class="conecta">
+  <div class="rot">Loja &amp; Redes</div>
+  <a class="btn btn-shopee" id="linkShopee" href="#">Comprar na Shopee</a>
+  <div class="gap"></div>
+  <a class="btn btn-ig" id="linkIg" href="#">@usecluff</a>
+  <div class="gap"></div>
+  <div class="rot">Conheça também</div>
+  <a class="btn btn-dbaesse" id="linkDbaesse" href="#">DBAESSE · Calçados Femininos</a>
+  <div class="sub">A marca irmã da CLUFF — papetes, saltos e mais.</div>
+</section>
+
+<footer>
+  <div class="foot-mark">Cluff</div>
+  <div class="foot-line">@usecluff · Nova Serrana · MG</div>
+</footer>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO CLUFF — os únicos valores que você precisa mexer
+   ============================================================ */
+
+/* (1) OBRIGATÓRIO — CSV publicado da planilha "CLUFF-catalogo".
+   No Google Sheets: Arquivo → Compartilhar → Publicar na web →
+   escolha a ABA da planilha → formato CSV → Publicar → copie o link
+   e cole aqui no lugar do texto abaixo. Sem isso o catálogo fica vazio. */
+const PLANILHA_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyU9YAzwzxYDka_wMBBJPjTX8Bl0_MgiV9NrYQ91W8iMzMFKdXhrQaikcMBYAiicXIu7Bpsj5WMW17/pub?gid=1627902631&single=true&output=csv";
+
+/* (2) FOTOS — as fotos B272-*.jfif ficam no MESMO repo que este index
+   (o repo do cluff-cat-logo). Por isso usamos CAMINHO RELATIVO: o catálogo
+   busca a foto do lado dele mesmo, servida pela Vercel. Assim NÃO depende de
+   saber a branch (main/principal) nem o endereço "raw" do GitHub.
+   Os fallbacks logo abaixo (REPOS) ainda tentam o GitHub raw, caso um dia
+   o index seja publicado separado das fotos. */
+const REPO_FOTOS   = "";   // "" = mesma pasta do index (relativo)
+
+const WHATSAPP        = "5537984166608";   // Leo — atende revendedoras
+const WHATSAPP_VENDAS = "5537991955925";   // Sabrina — atende os pedidos dos produtos
+const INSTAGRAM       = "https://instagram.com/usecluff";
+const SHOPEE          = "https://br.shp.ee/W4kS5doX";
+const DBAESSE         = "https://dbaesse-catalogo.vercel.app";   // "conheça também" aponta pra irmã
+const GRUPO_WHATSAPP  = "";   // link do grupo de compras da CLUFF (chat.whatsapp.com/...). Deixe vazio se ainda não tiver — a faixa some sozinha.
+const EXTENSAO        = ".jfif";
+
+/* Ordem das categorias no site + a frase de cada uma.
+   Categorias que existirem na planilha mas não estiverem aqui
+   aparecem automaticamente depois (sem frase). */
+const CATEGORIAS = [
+  ["Clog",     "O ícone da CLUFF — leve no pé, marcante no look, pronto pra qualquer hora do dia."]
+];
+
+/* Cor escrita na planilha -> bolinha no site */
+const CORES = {
+  "preto":"#2b2b2b","branco":"#f7f5f0","off-white":"#efe9dd","offwhite":"#efe9dd",
+  "creme":"#f0e6d2","marfim":"#f2ece0","areia":"#e2d3ba","bege":"#ddcdb6",
+  "nude":"#d9b9a3","palha":"#e0cfae","caramelo":"#b98b6a","chocolate":"#5b3d2b",
+  "marrom":"#7a5c46","cafe":"#4b3629","tabaco":"#8a5a34","whisky":"#a9713f",
+  "terracota":"#b4674a","telha":"#b45c3e","coral":"#e2735e","salmao":"#e79b86",
+  "blush":"#e8c4bd","rosa":"#d9a7a7","pink":"#d94f83","vermelho":"#8f2f2f","vinho":"#6d2635","bordo":"#5c1f2b",
+  "lilas":"#b9a5cf","roxo":"#5f4677","azul":"#3a4a5e","marinho":"#152532",
+  "azul-marinho":"#152532","jeans":"#5b7898","turquesa":"#3fa8a0",
+  "verde":"#4a5d47","verde-oliva":"#6b6b3f","verde-militar":"#4b5320","verde-agua":"#93c4b4",
+  "amarelo":"#d8b95c","mostarda":"#c9962f","laranja":"#c97a3c",
+  "dourado":"#c9a86a","prata":"#c8c8c8","cinza":"#9a9a9a","grafite":"#4a4a4a",
+  "onca":"#a67c52","animal-print":"#a67c52","transparente":"#e8e8e8"
+};
+
+/* ============================================================ */
+
+const $ = s => document.querySelector(s);
+const slug = s => (s||"").toString().trim().toLowerCase()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/\s+/g,"-");
+const cap = s => (s||"").toString().trim().replace(/\s+/g," ");
+
+function parseCSV(text){
+  const rows=[]; let row=[], val="", q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){
+      if(c==='"'){ if(text[i+1]==='"'){val+='"';i++;} else q=false; }
+      else val+=c;
+    }else{
+      if(c==='"') q=true;
+      else if(c===','){ row.push(val); val=""; }
+      else if(c==='\n'){ row.push(val); rows.push(row); row=[]; val=""; }
+      else if(c!=='\r') val+=c;
+    }
+  }
+  row.push(val); rows.push(row);
+  return rows.filter(r=>r.some(v=>(v||"").trim()!==""));
+}
+
+function mistura(hex,f,alvo){
+  const n=parseInt(hex.slice(1),16);
+  let r=(n>>16)&255,g=(n>>8)&255,b=n&255;
+  r=Math.round(r+(alvo-r)*f); g=Math.round(g+(alvo-g)*f); b=Math.round(b+(alvo-b)*f);
+  return "#"+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
+}
+function corHex(nome){
+  const k=slug(nome);
+  if(CORES[k]) return CORES[k];
+  const claro =/(^|-)(bb|bebe|baby|claro|clara|pastel)(-|$)/.test(k);
+  const escuro=/(^|-)(escuro|escura)(-|$)/.test(k);
+  const base=k.replace(/(^|-)(bb|bebe|baby|claro|clara|pastel|escuro|escura)(-|$)/g,"-")
+              .replace(/^-+|-+$/g,"");
+  let hex=CORES[base];
+  if(!hex) for(const key in CORES) if(base.includes(key)||k.includes(key)){hex=CORES[key];break;}
+  if(!hex) hex="#c4bcae";
+  if(claro)  hex=mistura(hex,.58,255);
+  if(escuro) hex=mistura(hex,.35,0);
+  return hex;
+}
+
+const REPOS=[
+  REPO_FOTOS,   // "" -> relativo (mesmo deploy que o index)
+  "https://raw.githubusercontent.com/leonardonandes-cmyk/Logotipo-CLUFF-Cat/main/",
+  "https://raw.githubusercontent.com/leonardonandes-cmyk/Logotipo-CLUFF-Cat/principal/"
+];
+const EXTS=[".jfif",".JFIF",".jpeg",".jpg",".JPEG",".JPG",".png",".PNG",".webp"];
+// Tolera diferença de maiúscula/minúscula na 1ª letra da Referência:
+// na planilha vem "b272-bege", mas o arquivo é "B272-bege.jfif"
+// (GitHub e Vercel diferenciam maiúscula de minúscula).
+function refVariants(ref){
+  const r=(ref||"").trim();
+  if(!r) return [];
+  const up=r.charAt(0).toUpperCase()+r.slice(1);
+  const lo=r.charAt(0).toLowerCase()+r.slice(1);
+  return [...new Set([up, r, lo])];   // tenta a inicial MAIÚSCULA primeiro
+}
+function urlsRef(ref){
+  const vars=refVariants(ref);
+  if(!vars.length) return [];
+  const out=[];
+  vars.forEach(v=>{ const enc=encodeURI(v); EXTS.forEach(e=>REPOS.forEach(r=>out.push(r+enc+e))); });
+  return out;
+}
+function fotoUrls(row, idx){
+  return urlsRef((row[idx.ref]||"").trim());
+}
+function setHero(ref){
+  const lista=urlsRef(ref||"banner-home");
+  if(!lista.length) return;
+  const h=$("#heroImg");
+  h.dataset.lista=encodeURIComponent(JSON.stringify(lista));
+  h.dataset.i="0";
+  h.onerror=function(){ proximaFoto(this); };
+  h.src=lista[0];
+}
+function proximaFoto(img){
+  try{
+    const lista=JSON.parse(decodeURIComponent(img.dataset.lista||"[]"));
+    let i=parseInt(img.dataset.i||"0",10)+1;
+    if(i<lista.length){ img.dataset.i=String(i); img.src=lista[i]; }
+    else { img.onerror=null; img.removeAttribute("alt"); img.style.opacity=".25"; }
+  }catch(e){ img.onerror=null; }
+}
+function trocaFoto(img,listaEnc){
+  img.dataset.lista=listaEnc; img.dataset.i="0";
+  try{ img.src=JSON.parse(decodeURIComponent(listaEnc))[0]; }catch(e){}
+}
+
+function precoFmt(v){
+  const s=(v||"").toString().trim();
+  if(!s) return "";
+  if(s.toUpperCase().indexOf("R$")===0) return s;
+  const n=parseFloat(s.replace(/\./g,"").replace(",","."));
+  if(isNaN(n)) return s;
+  return "R$ " + n.toFixed(2).replace(".",",");
+}
+
+function cardHTML(p){
+  const cores = p.cores;
+  const first = cores[0];
+  const dots = cores.map((c,i)=>
+    `<span class="dot${i===0?" on":""}" data-lista="${c.lista}" data-cor="${c.cor}" style="background:${corHex(c.cor)}" title="${c.cor}"></span>`
+  ).join("");
+  const tag = p.tag ? `<span class="tag${p.oferta?" tag-oferta":""}">${p.tag}</span>` : (p.oferta?`<span class="tag tag-oferta">SALE</span>`:"");
+  const msg = encodeURIComponent("Olá! Tenho interesse no modelo "+p.nome+" da CLUFF.");
+  return `<div class="card" data-nome="${p.nome}">
+    <a class="frame" href="https://wa.me/${WHATSAPP_VENDAS}?text=${msg}" target="_blank" rel="noopener">
+      <img src="${first.fotos[0]}" data-lista="${first.lista}" data-i="0" onerror="proximaFoto(this)" alt="${p.nome}" loading="lazy" decoding="async">
+      ${tag}
+      <span class="buy">Comprar</span>
+    </a>
+    <div class="meta">
+      <div class="name">${p.nome}</div>
+      <div class="price${p.oferta?" sale":""}">${(p.oferta&&p.de)?`<span class="price-de">${p.de}</span>`:""}${p.preco}</div>
+      ${p.num?`<div class="tamanhos">Tam. ${p.num}</div>`:""}
+      ${cores.length>1?`<div class="swatches">${dots}</div>`:""}
+      <div class="cor-nome">${cores.length>1?first.cor:""}</div>
+    </div>
+  </div>`;
+}
+
+function secaoHTML(id, eyebrow, titulo, desc, produtos, extraClass){
+  const cards = produtos.length
+      ? `<div class="grid">${produtos.map(cardHTML).join("")}</div>`
+      : `<div class="vazio">Novidades em breve</div>`;
+  const inner = `<div class="col-head">
+      <div class="col-eyebrow">${eyebrow}</div>
+      ${titulo?`<div class="col-title">${titulo}</div>`:""}
+      ${desc?`<div class="col-desc">${desc}</div>`:""}
+      <div class="rule"></div>
+    </div>
+    ${cards}`;
+  if(extraClass==="ofertas")
+    return `<section class="collection ofertas" id="${id}"><div class="ofertas-in">${inner}</div></section>`;
+  return `<section class="collection" id="${id}">${inner}</section>`;
+}
+
+async function baixar(src,nome){
+  try{
+    const r=await fetch(src); const b=await r.blob();
+    const u=URL.createObjectURL(b);
+    const a=document.createElement("a"); a.href=u; a.download=nome.replace(/\s+/g,"-")+EXTENSAO;
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(u);
+  }catch(e){ window.open(src,"_blank"); }
+}
+
+function ativar(){
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll(".card").forEach((c,i)=>{c.style.transitionDelay=(i%4*70)+"ms";io.observe(c);});
+  document.querySelectorAll(".rule").forEach(r=>io.observe(r));
+  function preloadCores(card){
+    card.querySelectorAll(".dot").forEach(d=>{
+      let lista;
+      try{ lista=JSON.parse(decodeURIComponent(d.dataset.lista||"[]")); }catch(e){ return; }
+      (function tenta(i){
+        if(i>=lista.length) return;
+        const im=new Image();
+        im.onerror=function(){ tenta(i+1); };
+        im.src=lista[i];
+      })(0);
+    });
+  }
+  const pio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){preloadCores(e.target);pio.unobserve(e.target);}})},{rootMargin:"300px"});
+  document.querySelectorAll(".card").forEach(c=>pio.observe(c));
+
+  document.querySelectorAll(".card").forEach(card=>{
+    const img=card.querySelector(".frame img");
+    const nome=card.dataset.nome||"produto";
+    const corNome=card.querySelector(".cor-nome");
+    card.querySelectorAll(".dot").forEach(d=>{
+      d.addEventListener("click",e=>{
+        e.preventDefault(); e.stopPropagation();
+        img.style.opacity=0;
+        setTimeout(()=>{img.onerror=function(){proximaFoto(this)};trocaFoto(img,d.dataset.lista);img.style.opacity=1;},140);
+        card.querySelectorAll(".dot").forEach(x=>x.classList.remove("on"));
+        d.classList.add("on");
+        if(corNome) corNome.textContent=d.dataset.cor;
+      });
+    });
+    const b=document.createElement("span");
+    b.className="dl"; b.title="Baixar foto"; b.textContent="\u2193";
+    b.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();baixar(img.currentSrc||img.src,nome+"-"+((corNome&&corNome.textContent)||""));});
+    card.querySelector(".frame").appendChild(b);
+  });
+
+  initCampCarousel();
+}
+
+function initCampCarousel(){
+  const vp=document.querySelector(".camp-viewport");
+  if(!vp) return;
+  const track=vp.querySelector(".camp-track");
+  const prev=vp.querySelector(".camp-arrow.prev");
+  const next=vp.querySelector(".camp-arrow.next");
+  if(!track||!prev||!next) return;
+  function passo(){
+    const card=track.querySelector(".camp-card");
+    const gap=parseFloat(getComputedStyle(track).gap)||18;
+    return card ? card.getBoundingClientRect().width+gap : track.clientWidth*.8;
+  }
+  function atualiza(){
+    const max=track.scrollWidth-track.clientWidth-2;
+    prev.disabled=track.scrollLeft<=2;
+    next.disabled=track.scrollLeft>=max;
+  }
+  function avanca(){
+    const max=track.scrollWidth-track.clientWidth-2;
+    if(track.scrollLeft>=max) track.scrollTo({left:0,behavior:"smooth"});
+    else track.scrollBy({left:passo(),behavior:"smooth"});
+  }
+  const reduz=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const podeAuto=()=>!reduz && track.scrollWidth>track.clientWidth+4;
+  let timer=null, idle=null;
+  function toca(){ if(podeAuto() && !timer) timer=setInterval(avanca,4000); }
+  function para(){ if(timer){ clearInterval(timer); timer=null; } }
+  function reinicia(){ para(); toca(); }
+
+  prev.addEventListener("click",()=>{ track.scrollBy({left:-passo(),behavior:"smooth"}); reinicia(); });
+  next.addEventListener("click",()=>{ avanca(); reinicia(); });
+  track.addEventListener("scroll",atualiza,{passive:true});
+  window.addEventListener("resize",atualiza);
+  vp.addEventListener("mouseenter",para);
+  vp.addEventListener("mouseleave",toca);
+  vp.addEventListener("touchstart",()=>{ para(); clearTimeout(idle); },{passive:true});
+  vp.addEventListener("touchend",()=>{ clearTimeout(idle); idle=setTimeout(toca,5000); },{passive:true});
+
+  atualiza();
+  toca();
+}
+
+async function montar(){
+  let txt;
+  try{
+    const r=await fetch(PLANILHA_CSV+"&t="+Date.now());
+    txt=await r.text();
+  }catch(e){
+    $("#status").textContent="Não foi possível carregar o catálogo agora. Tente novamente em instantes.";
+    return;
+  }
+  const rows=parseCSV(txt);
+  if(rows.length<2){ $("#status").textContent="A planilha ainda não tem produtos."; return; }
+
+  const head=rows[0].map(h=>slug(h));
+  const idx={
+    cat:  head.findIndex(h=>h.startsWith("categoria")),
+    nome: head.findIndex(h=>h.startsWith("nome")),
+    cor:  head.findIndex(h=>h.startsWith("cor")),
+    preco:head.findIndex(h=>h.startsWith("preco")),
+    tag:  head.findIndex(h=>h.startsWith("tag")),
+    of:   head.findIndex(h=>h.startsWith("oferta")),
+    de:   head.findIndex(h=>h==="de" || h.startsWith("de-") || h.startsWith("de ") || h.startsWith("preco-de") || h.startsWith("precocheio")),
+    num:  head.findIndex(h=>h.startsWith("numeracao")),
+    ref:  head.findIndex(h=>h.startsWith("referencia")),
+    link: head.findIndex(h=>h.startsWith("link")),
+    pub:  head.findIndex(h=>h.startsWith("publico"))
+  };
+
+  const mapa={};
+  const ordem=[];
+  const campanhas=[];
+  let bannerRef="";
+
+  const ehOfertaCat = s => (s==="oferta"||s==="ofertas"||s==="sale");
+
+  for(let i=1;i<rows.length;i++){
+    const r=rows[i];
+    const cat=cap(r[idx.cat]), nome=cap(r[idx.nome]);
+    const ref=(r[idx.ref]||"").trim();
+
+    if(slug(cat)==="teasersale" || slug(cat)==="faixasale" || slug(cat)==="teaser"){ continue; }
+    if(!ref) continue;
+
+    if(slug(cat)==="banner" || slug(nome)==="banner"){ bannerRef=ref; continue; }
+    if(slug(cat)==="campanha" || slug(cat)==="campanhas"){
+      const fs=fotoUrls(r,idx);
+      if(fs.length) campanhas.push({nome:cap(nome)||"Campanha CLUFF",fotos:fs,
+                                    lista:encodeURIComponent(JSON.stringify(fs))});
+      continue;
+    }
+    // categorias exclusivas de revenda — não aparecem no catálogo público
+    if(slug(cat)==="campanharevenda"||slug(cat)==="campanha-revenda"||slug(cat)==="bannerrevenda"||slug(cat)==="banner-revenda"){ continue; }
+    if(!nome) continue;
+
+    const chave=slug(nome);
+    if(!mapa[chave]){
+      mapa[chave]={cat:"",publico:"",nome:nome,tag:cap(r[idx.tag]),precoBase:"",num:"",cores:[]};
+      ordem.push(chave);
+    }
+    const p=mapa[chave];
+    const pub=(idx.pub>=0)?cap(r[idx.pub]):"";
+    if(!p.publico && pub) p.publico=pub;
+
+    const catEhOferta=ehOfertaCat(slug(cat));
+    if(!catEhOferta && cat && !p.cat) p.cat=cat;
+    if(!p.tag && cap(r[idx.tag])) p.tag=cap(r[idx.tag]);
+    if(idx.num>=0 && !p.num && cap(r[idx.num])) p.num=cap(r[idx.num]);
+
+    const precoLinha=precoFmt(r[idx.preco]);
+    if(!p.precoBase && precoLinha) p.precoBase=precoLinha;
+
+    const deLinha=(idx.de>=0)?precoFmt(r[idx.de]):"";
+
+    const fotos=fotoUrls(r,idx);
+    if(fotos.length) p.cores.push({
+      cor:cap(r[idx.cor])||"Único",
+      fotos:fotos,
+      lista:encodeURIComponent(JSON.stringify(fotos)),
+      oferta: catEhOferta || slug(r[idx.of])==="sim",
+      preco: precoLinha,
+      de: deLinha
+    });
+  }
+
+  const produtos=ordem.map(k=>mapa[k]).filter(p=>p.cores.length);
+  if(!produtos.length){ $("#status").textContent="A planilha ainda não tem produtos com foto."; return; }
+
+  if(bannerRef){ setHero(bannerRef); }
+
+  let htmlCamp="", menuCamp="";
+  if(campanhas.length){
+    menuCamp=`<a href="#campanhas">Campanhas</a>`;
+    const cards=campanhas.map((c,i)=>`
+      <div class="card camp-card" data-nome="${c.nome}">
+        ${i===0
+          ? `<a class="frame" href="#ofertas" aria-label="Ver promoções">
+               <img src="${c.fotos[0]}" data-lista="${c.lista}" data-i="0"
+                    onerror="proximaFoto(this)" alt="${c.nome}" loading="lazy" decoding="async">
+             </a>`
+          : `<div class="frame">
+               <img src="${c.fotos[0]}" data-lista="${c.lista}" data-i="0"
+                    onerror="proximaFoto(this)" alt="${c.nome}" loading="lazy" decoding="async">
+             </div>`}
+      </div>`).join("");
+    htmlCamp=`<section class="campanhas" id="campanhas">
+      <div class="col-head">
+        <div class="col-eyebrow">Editorial</div>
+        <div class="col-title">Campanhas</div>
+        <div class="rule"></div>
+      </div>
+      <div class="camp-viewport">
+        <button class="camp-arrow prev" aria-label="Anterior">&#8249;</button>
+        <div class="camp-track">${cards}</div>
+        <button class="camp-arrow next" aria-label="Próximo">&#8250;</button>
+      </div>
+    </section>`;
+  }
+
+  function montaCard(p, cores, isSale){
+    const precoCtx=(cores.find(c=>c.preco)||{}).preco || p.precoBase || "";
+    const deCtx=(cores.find(c=>c.de)||{}).de || "";
+    return {nome:p.nome, preco:precoCtx, de:deCtx, tag:isSale?"":p.tag, oferta:isSale, num:p.num, cores:cores};
+  }
+
+  let html="", menu="";
+
+  // frase de cada LINHA (vem de CATEGORIAS)
+  const fraseCat={};
+  CATEGORIAS.forEach(([n,f])=>{ fraseCat[slug(n)]=f; });
+
+  // ordem das LINHAS: as de CATEGORIAS primeiro, depois as demais que aparecerem
+  const linhaOrdem=[]; const linhaVis=new Set();
+  const pushLinha=nc=>{ const id=slug(nc); if(!id||linhaVis.has(id)) return; linhaVis.add(id); linhaOrdem.push(nc); };
+  CATEGORIAS.forEach(([n])=>pushLinha(n));
+  produtos.forEach(p=>{ if(p.cat && !ehOfertaCat(slug(p.cat))) pushLinha(p.cat); });
+
+  // monta as seções de LINHA (cards) de um público; devolve "" se não houver nada
+  function linhasDoPublico(pub, padrao){
+    let bloco="";
+    linhaOrdem.forEach(nc=>{
+      const cid=slug(nc);
+      const lista=produtos.filter(p=>{
+        const pp=p.publico||padrao;
+        return slug(pp)===slug(pub) && slug(p.cat)===cid;
+      }).map(p=>montaCard(p, p.cores.filter(c=>!c.oferta), false)).filter(c=>c.cores.length);
+      if(lista.length) bloco+=secaoHTML(slug(pub)+"-"+cid,"Linha",nc,fraseCat[cid]||"",lista);
+    });
+    return bloco;
+  }
+
+  // só entra em modo "público" quando pelo menos um produto estiver marcado
+  const temPublico = produtos.some(p=>p.publico && p.cat && !ehOfertaCat(slug(p.cat)));
+
+  if(!temPublico){
+    // TRANSIÇÃO: ninguém tem público ainda -> mantém o layout por LINHA (como antes)
+    linhaOrdem.forEach(nc=>{
+      const id=slug(nc);
+      const lista=produtos.filter(p=>slug(p.cat)===id)
+        .map(p=>montaCard(p, p.cores.filter(c=>!c.oferta), false)).filter(c=>c.cores.length);
+      if(!lista.length && !fraseCat[id]) return;
+      menu+=`<a href="#${id}">${nc}</a>`;
+      html+=secaoHTML(id,"Linha",nc,fraseCat[id]||"",lista);
+    });
+  } else {
+    // PÚBLICO em cima -> LINHA dentro. Produto sem público cai em "Feminino".
+    const padrao="Feminino";
+    const prefPub=["Feminino","Infantil","Masculino"];
+    const temSem = produtos.some(p=> !p.publico && p.cat && !ehOfertaCat(slug(p.cat)) && p.cores.some(c=>!c.oferta));
+    const pubOrdem=[]; const pubVis=new Set();
+    const addPub=v=>{ const s=slug(v); if(!v||pubVis.has(s)) return; pubVis.add(s); pubOrdem.push(v); };
+    prefPub.forEach(v=>{ if(produtos.some(p=>slug(p.publico)===slug(v)) || (temSem && slug(v)===slug(padrao))) addPub(v); });
+    produtos.forEach(p=>{ if(p.publico) addPub(p.publico); });
+
+    pubOrdem.forEach(pub=>{
+      const bloco=linhasDoPublico(pub, padrao);
+      if(!bloco) return; // não mostra aba de público vazia
+      const pid="pub-"+slug(pub);
+      menu+=`<a href="#${pid}">${pub}</a>`;
+      html+=`<section class="collection pub-head" id="${pid}"><div class="col-head"><div class="col-eyebrow">Público</div><div class="col-title">${pub}</div><div class="rule"></div></div></section>`+bloco;
+    });
+  }
+
+  const sale=[];
+  produtos.forEach(p=>{
+    const cs=p.cores.filter(c=>c.oferta);
+    if(cs.length) sale.push(montaCard(p, cs, true));
+  });
+
+  let htmlFaixa="";
+  if(sale.length){
+    htmlFaixa=`<a class="zsale" href="#ofertas" aria-label="Ver ofertas"><div class="zsale-word">SALE</div></a>`;
+  }
+
+  const menuSale = sale.length ? `<a class="menu-sale" href="#ofertas">SALE</a>` : "";
+  html+=htmlFaixa+secaoHTML("ofertas","Seleção · por tempo limitado","",
+    "Peças selecionadas com condição especial — enquanto durar o estoque.",sale,"ofertas");
+
+  $("#menu").innerHTML=menuSale+menuCamp+menu;
+  $("#conteudo").innerHTML=htmlCamp+html;
+  ativar();
+}
+
+/* Links dos botões */
+$("#linkRev").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá! Quero ser Revendedora CLUFF.");
+$("#linkRev").target="_blank"; $("#linkRev").rel="noopener";
+$("#linkShopee").href=SHOPEE; $("#linkShopee").target="_blank"; $("#linkShopee").rel="noopener";
+$("#linkIg").href=INSTAGRAM; $("#linkIg").target="_blank"; $("#linkIg").rel="noopener";
+$("#linkDbaesse").href=DBAESSE; $("#linkDbaesse").target="_blank"; $("#linkDbaesse").rel="noopener";
+
+/* Faixa do grupo de compras — só aparece se você preencher GRUPO_WHATSAPP */
+if(GRUPO_WHATSAPP && GRUPO_WHATSAPP.trim()){
+  $("#linkGrupo").href=GRUPO_WHATSAPP;
+  $("#faixaGrupo").classList.add("on");
+}
+
+setHero("banner-home");
+montar();
+</script>
+</body>
+</html>
